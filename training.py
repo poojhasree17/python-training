@@ -237,3 +237,68 @@ if x>=0 and y>=0 and z>=0:
         print("not a valid triangle")
 else:
     print("invalid input")
+
+#count the number divisble by 5
+count=0
+for d in range (1,51):
+    if d%5==0:
+        count+=1
+        print(d)
+print("count",count)
+
+#sum of odd numbers
+sum=0
+for i in range(1,21):
+    if i%2!=0:
+        sum+=i
+print("sum of odd numbers:",sum)
+
+#print the numbers which are divisble by 3 but not by 2
+for i in range(1,31):
+    if i%3==0 and i%2!=0:
+        print(i)
+    else:
+        pass
+
+#count the positive and negative numbers
+count_pos=0
+count_neg=0
+num=[-1,2,-3,4,-5,6,-7,8,-9,10]
+#num=input("enter the numbers separated by space:").split()
+for i in num:
+    #i=int(i)
+    if i>0:
+        count_pos+=1
+    elif i<0:
+        count_neg+=1
+print("count of positive numbers:",count_pos)   
+print("count of negative numbers:",count_neg)
+
+#factorial of a number
+num=int(input())
+factorial=1
+for i in range(1,num+1):
+    factorial*=i
+print(factorial)
+
+#prime number or not
+num=int(input())
+if num>1:
+    for i in range(2,num):
+        if num%i==0:
+            print("not prime")
+            break
+    else:
+            print("prime")
+else:
+     print("invalid input")
+
+#find the largest number in a list
+# num=[5,88,8,76,9,45,23,67,12]
+num=input("enter the numbers separated by space:").split()
+largest=int(num[0])
+for i in num:
+    i=int(i)
+    if i>largest:
+        largest=i
+print(largest)
