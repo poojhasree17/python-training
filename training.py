@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #odd or even
 num=int(input())
 result="even" if (num%2==0) else "odd"
@@ -98,7 +97,6 @@ if digit>=10 and digit<100:
     print("it is a two two digit")
 else:
     print("not")
-=======
 #odd or even
 num=int(input())
 result="even" if (num%2==0) else "odd"
@@ -239,4 +237,3 @@ if x>=0 and y>=0 and z>=0:
         print("not a valid triangle")
 else:
     print("invalid input")
->>>>>>> 8adac92 (python)
