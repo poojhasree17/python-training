@@ -302,3 +302,66 @@ for i in num:
     if i>largest:
         largest=i
 print(largest)
+
+#armstrong number or not
+num=int(input("enter the number:"))
+num_str=str(num)
+num_len=len(num_str)
+sum=0
+for i in num_str:
+    sum+=int(i)**num_len
+if sum==num:
+        print("armstrong number")
+else:
+        print("not armstrong number")
+
+#sum of four digit number
+num=int(input())
+sum=0
+while num>0:
+       digit=num%10
+       sum+=digit
+       num=num//10
+print(sum)
+
+#1.automorphic or not
+def automorphic(num):
+    return (num*num)%(10**len(str(num)))==num
+print(automorphic(11))
+
+#2.automorphic or not
+num=int(input())
+n=num*num
+if str(n).endswith(str(num)):
+    print("auto")
+else:
+    print("not auto")
+
+#neon number or not
+num=int(input())
+sq=num*num
+sum=0
+for i in str(sq):
+    sum+=int(i)
+if sum==num:
+    print("neon")
+else:
+     print("not neon")
+
+#palindrome or not
+num=int(input())
+if str(num)==str(num)[::-1]:
+    print("palindrome")
+else:
+    print("not palindrome")
+
+#perfect number or not
+num=int(input())
+sum=0
+for i in range(1,num):
+    if num%i==0:
+        sum+=i
+if sum==num:
+    print("perfect!")
+else:
+    print("not perfect!")
