@@ -77,9 +77,9 @@ while True:#to create the loop to continue until the user wants to stop
 num_1=int(input())
 if num_1%3==0 and num_1%5==0:
     print("divisble by 3 and 5")
-elif num%3==3:
+elif num_1%3==0:
     print("only divisble by 3")
-elif num%5==0:
+elif num_1%5==0:
     print("only divisble by 5")
 else:
     print("not divisble by both")
@@ -176,9 +176,9 @@ while True:#to create the loop to continue until the user wants to stop
 num_1=int(input())
 if num_1%3==0 and num_1%5==0:
     print("divisble by 3 and 5")
-elif num%3==3:
+elif num_1%3==0:
     print("only divisble by 3")
-elif num%5==0:
+elif num_1%5==0:
     print("only divisble by 5")
 else:
     print("not divisble by both")
