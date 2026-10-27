@@ -322,7 +322,7 @@ for i in range(row,0,-1):
         print("* ",end="")
     print()
 
-
+#squared pattern
 n=int(input())
 for i in range(n):
     for j in range(n):
@@ -346,7 +346,7 @@ a,b=b,a
 print(a,b)
 
 #LCM of the number
-#1
+#1-method
 import math
 a=int(input())
 b=int(input())
@@ -355,7 +355,7 @@ if a==0 or b==0:
     print("no")
 else:
     print((a*b)//result)
-#2
+#2-method
 a=1
 b=2
 while b>0:
@@ -381,7 +381,7 @@ for i in range(1,n+1):
             print(" ",end="")
     print()
 
-# # spy number
+# spy number
 num=int(input())
 digit_sum=0
 for i in range(len(str(num))):
@@ -399,6 +399,7 @@ cgpa=float(input())
 dept=input()
 result= "yes" if cgpa>8 and dept=="IT" else "no"
 print(result)
+
 #3
 n=int(input())
 for i in range(1,11):
@@ -450,14 +451,17 @@ for i in s:
     print(l)
 
 #palindrome
+#1-method
 s=input()
 pal="palindrome" if s==s[::-1] else "not palindrome"
 print(pal)
-# a=input()
-# if a==a[::-1]:
-#     print("it is palindrome")
-# else:
-#     print("it is not a palindrome")   
+
+#2-method
+a=input()
+if a==a[::-1]:
+    print("it is palindrome")
+else:
+    print("it is not a palindrome")   
 
 #replacing the char witohut built-in funcs
 s="hello"
@@ -513,3 +517,99 @@ for i in text:
 #         result=i
 #         break
 # print("non repeating char:",result)
+
+#STRING Methods
+s=input()
+print(s[-3:])
+
+#Join the words in a string
+#1-method
+s=input()
+print(s.replace(" ",""))
+print("".join(s.split()))
+
+#2-method
+s=input()
+l=""
+for i in s:
+    if i==" ":
+        continue
+    l+=i
+print(l)
+
+
+#Count the words in a string(avoid spaces)
+#1-method
+s=input()
+l=s.split()
+print(len(l))
+
+#2-method
+s=input()
+l=s.split()
+count=0
+for i in s:
+    if i==" ":
+        continue
+    count+=1
+    l+=i
+print(count,l)
+
+# count the vowels
+#1-method
+s=input()
+vowel="aeiouAEIOU"
+v=0
+c=0
+for i in s:
+    if i.isalpha():
+        if i in vowel:
+            v+=1
+        else:
+            c+=1
+print(v,c)
+
+#2-method
+s=input()
+vow="aeiouAEIOU"
+con="bcdfghjklmnpqrstvwxyz"
+v=0
+c=0
+for i in s:
+    if i in vow:
+        v+=1
+    if i in con:
+        c+=1
+print(v,c)
+
+#count the words starts with vowels
+s=input()
+vow=("a","e","i","o","u")
+count=0
+#1-method
+for i in s.lower().split():
+    if i.startswith(vow):
+        count+=1
+print(count)
+#2-method
+for i in l:
+    if i and i[0] in vow:
+        count+=1
+print(count)
+
+#replace the vowels with *
+s=input()
+s1=""
+vow="aeiouAEIOU"
+for i in s:
+    if i in vow:
+        s1+="*"
+    else:
+        s1+=i
+print(s1)
+
+#reverse the word without changing the order
+s=input()
+list=s.split()
+for char in list:
+    print(char[::-1],end=" ")
