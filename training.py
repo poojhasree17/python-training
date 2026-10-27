@@ -266,3 +266,250 @@ if sum==num:
     print("perfect!")
 else:
     print("not perfect!")
+
+#right angle
+for i in range(1,7):
+    print("*"*i)
+
+#inverted right angle
+r=int(input())
+for i in range(r,0,-1):
+    print("*"*i)
+
+#duck number or not
+num=int(input())
+num_str=str(num)
+if num_str[0]=="0":
+    print("not a duck number")
+if "0" in num_str:
+    print("duck number")
+else:
+    print("not a duck number")  
+
+#peterson number or not
+import math
+num=int(input())
+s=0 
+sum=0
+for i in str(num):
+    s=math.factorial(int(i))
+    sum+=s
+result="peterson" if sum==num else "not"
+print(result)
+
+#strong number or not
+import math
+num=int(input())
+sum=0
+for i in str(num):
+    i=math.factorial(int(i))
+    sum+=i
+result="strong number" if sum==num else "not a strong number"
+print(result)
+
+#diamond
+row=int(input())
+for i in range(0, row+1):
+    for j in range(0,row-i):
+        print(" ",end="")
+    for k in range(i):
+        print("* ", end="")
+    print()
+for i in range(row,0,-1):
+    for j in range(row-i):
+        print(" ",end="")
+    for k in range(i):
+        print("* ",end="")
+    print()
+
+
+n=int(input())
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-1 or j==0 or j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+#GCD of the number
+a=int(input())
+b=int(input())
+while b>0:
+      a,b=b,a%b
+print(a)
+
+#swapping without temp variable
+a=int(input())
+b=int(input())
+a,b=b,a
+print(a,b)
+
+#LCM of the number
+#1
+import math
+a=int(input())
+b=int(input())
+result=math.gcd(a,b)
+if a==0 or b==0:
+    print("no")
+else:
+    print((a*b)//result)
+#2
+a=1
+b=2
+while b>0:
+    a,b=b,a%b
+lcm=(a*b)//a
+print(lcm)
+
+#Fibonacci series but only print even numbers
+a=int(input())
+b=int(input())
+for i in range(10):
+    if(a%2==0):
+        print(a,end=" ")
+    a,b=b,a+b
+
+#Right angled triangle
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        if j==1 or j==i or i==n:
+            print("*", end=" ")
+        else:
+            print(" ",end="")
+    print()
+
+# # spy number
+num=int(input())
+digit_sum=0
+for i in range(len(str(num))):
+    digit_sum += int(str(num)[i])
+
+#LOOPS concepts
+#1
+n=int(input())
+if n % 2 == 0:
+    print("even")
+else:
+    print("odd")
+#2
+cgpa=float(input())
+dept=input()
+result= "yes" if cgpa>8 and dept=="IT" else "no"
+print(result)
+#3
+n=int(input())
+for i in range(1,11):
+    a=i*n
+    print("{}x{}={}".format(n,i,a))
+#4
+start=10
+stop=20
+count=0
+for i in  range(start,stop+1):
+    if i>1:
+        for j in range(2,i): 
+           if i%j==0:
+               break
+        else:
+            count+=1
+            print(i)
+print(count)
+
+#STRING concepts
+s=input()
+for i in s:
+    print(i)
+
+#count the char
+s=input()
+count=0
+for i in s:
+    count+=1
+print(count)
+
+#count the vowels
+s=input()
+v="aeiouAEIOU"
+count=0
+for i in s:
+    if i in v:
+        count+=1
+print(count)
+
+#find the count of a given char in a string
+s=input()
+l=""
+for i in s:
+    if i.islower():
+        l=i.upper()
+    else:
+        l=i.lower()
+    print(l)
+
+#palindrome
+s=input()
+pal="palindrome" if s==s[::-1] else "not palindrome"
+print(pal)
+# a=input()
+# if a==a[::-1]:
+#     print("it is palindrome")
+# else:
+#     print("it is not a palindrome")   
+
+#replacing the char witohut built-in funcs
+s="hello"
+print("k"+s[1:])
+
+#f string method
+name=input()
+age=int(input())
+print("my name is {} and my age is {}".format(name,age))
+print(f"my name is {name} and my age is {age}")
+
+#first and last char are same or not
+s=input()
+if s[0]==s[-1]:
+    print('same')
+else:
+    print("not")
+
+#find the count of the char in a string
+s=input()
+a=input()
+count=0
+for i in s.lower():
+    if a is i:
+        count+=1       
+print(count)
+
+#duplicate chars in a string
+s=input()
+s1=set()
+dupe=set()
+for i in s:
+    if i in s1:
+        dupe.add(i)
+    else:
+        s1.add(i)
+print(dupe)   
+
+#first non-repeating char in a string
+text=input()
+count={}
+for i in text:
+    if i in count:
+        count[i]+=1
+    else:
+        count[i]=1
+print(count)
+result=None
+for i in text:
+    if count[i]==1:
+        print(i)
+        break
+#         result=i
+#         break
+# print("non repeating char:",result)
